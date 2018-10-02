@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+import Parse
 class LogInViewController: UIViewController {
 
+
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +24,18 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginButton(_ sender: UIButton) {
+        
     }
-    */
-
+    @IBAction func signupButton(_ sender: UIButton) {
+        signupUser()
+    }
+    func signupUser() {
+        let newUser = PFUser()
+        newUser.username = usernameField.text
+        //newUser.email
+    }
+    func loginUser() {
+        
+    }
 }
