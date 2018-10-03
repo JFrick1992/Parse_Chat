@@ -40,8 +40,7 @@
                                 <rect key="frame" x="77" y="226" width="55" height="30"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aHt-nR-xJv"/>
-                                    <segue destination="S2N-TE-Nbj" kind="show" id="g3P-Ex-l9p"/>
+                                    <segue destination="S2N-TE-Nbj" kind="show" id="bND-vL-kCH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9E-5S-8T8">
@@ -79,16 +78,32 @@
                     <connections>
                         <outlet property="passwordField" destination="G0q-cd-l8L" id="mhs-iT-fcM"/>
                         <outlet property="usernameField" destination="Jvr-NX-yLN" id="ZFq-2P-acM"/>
+                        <segue destination="28Y-IN-eZm" kind="presentation" identifier="logInSegue" id="KPb-hF-yRO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
-        <!--View Controller-->
+        <!--ChatViewController-->
+        <scene sceneID="ivS-q9-aCh">
+            <objects>
+                <viewController title="ChatViewController" id="28Y-IN-eZm" customClass="ChatViewController" customModule="Parse_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ifk-EJ-uRh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6aF-St-Rls"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egX-Cb-mUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="33"/>
+        </scene>
+        <!--Sign Up View Controller-->
         <scene sceneID="GPd-hw-ZO1">
             <objects>
-                <viewController id="S2N-TE-Nbj" sceneMemberID="viewController">
+                <viewController id="S2N-TE-Nbj" customClass="SignUpViewController" customModule="Parse_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KeY-rx-nih">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,6 +126,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO1-uY-4Od">
+                                <rect key="frame" x="242" y="265" width="55" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xAd-Ht-r8H"/>
+                                    <action selector="signUpButtonClick:" destination="S2N-TE-Nbj" eventType="touchUpInside" id="3FK-Mt-Eet"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivb-Ny-XCw">
                                 <rect key="frame" x="78.5" y="169" width="218.5" height="30"/>
                                 <nil key="textColor"/>
@@ -118,56 +141,58 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS2-Y6-XDw">
-                                <rect key="frame" x="79" y="265" width="55" height="30"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="signupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rh8-Lx-YsC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO1-uY-4Od">
-                                <rect key="frame" x="259" y="265" width="38" height="30"/>
+                                <rect key="frame" x="78" y="265" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xAd-Ht-r8H"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="sjw-WI-kCd"/>
+                                    <action selector="signupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rh8-Lx-YsC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fBP-8s-XiK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HO1-uY-4Od" firstAttribute="leading" secondItem="IS2-Y6-XDw" secondAttribute="trailing" constant="125" id="2wc-rw-BpR"/>
                             <constraint firstItem="ivb-Ny-XCw" firstAttribute="leading" secondItem="iRC-nt-Op6" secondAttribute="leading" id="5FQ-tb-jre"/>
                             <constraint firstItem="ivb-Ny-XCw" firstAttribute="top" secondItem="d6b-Rg-VqL" secondAttribute="bottom" constant="18" id="5Y1-T6-SST"/>
                             <constraint firstItem="d6b-Rg-VqL" firstAttribute="leading" secondItem="iRC-nt-Op6" secondAttribute="leading" id="7ob-hc-wuu"/>
                             <constraint firstItem="d6b-Rg-VqL" firstAttribute="trailing" secondItem="iRC-nt-Op6" secondAttribute="trailing" id="9o7-W5-9uK"/>
-                            <constraint firstItem="IS2-Y6-XDw" firstAttribute="leading" secondItem="ivb-Ny-XCw" secondAttribute="leading" id="BI7-fW-xr1"/>
-                            <constraint firstItem="HO1-uY-4Od" firstAttribute="trailing" secondItem="d6b-Rg-VqL" secondAttribute="trailing" id="BoY-Lh-gkg"/>
                             <constraint firstItem="1m3-ug-Aud" firstAttribute="top" secondItem="ivb-Ny-XCw" secondAttribute="bottom" constant="18" id="BzK-Et-dG2"/>
+                            <constraint firstItem="IS2-Y6-XDw" firstAttribute="top" secondItem="1m3-ug-Aud" secondAttribute="bottom" constant="18" id="Cvx-Br-YfT"/>
+                            <constraint firstItem="1m3-ug-Aud" firstAttribute="leading" secondItem="ivb-Ny-XCw" secondAttribute="leading" id="EEl-Fh-caS"/>
                             <constraint firstItem="ivb-Ny-XCw" firstAttribute="top" secondItem="d6b-Rg-VqL" secondAttribute="bottom" constant="18" id="Egv-2L-gBX"/>
                             <constraint firstItem="1m3-ug-Aud" firstAttribute="centerX" secondItem="KeY-rx-nih" secondAttribute="centerX" id="Eqh-GS-qOz"/>
                             <constraint firstItem="d6b-Rg-VqL" firstAttribute="top" secondItem="iRC-nt-Op6" secondAttribute="bottom" constant="18" id="F3u-QK-5cc"/>
+                            <constraint firstItem="HO1-uY-4Od" firstAttribute="top" secondItem="1m3-ug-Aud" secondAttribute="bottom" constant="18" id="Fkg-if-RIX"/>
                             <constraint firstItem="1m3-ug-Aud" firstAttribute="trailing" secondItem="d6b-Rg-VqL" secondAttribute="trailing" id="JP9-is-yCP"/>
                             <constraint firstItem="d6b-Rg-VqL" firstAttribute="top" secondItem="iRC-nt-Op6" secondAttribute="bottom" constant="18" id="NUH-Z7-RrY"/>
+                            <constraint firstItem="IS2-Y6-XDw" firstAttribute="leading" secondItem="ivb-Ny-XCw" secondAttribute="leading" id="UIa-ZO-VEs"/>
                             <constraint firstItem="1m3-ug-Aud" firstAttribute="top" secondItem="ivb-Ny-XCw" secondAttribute="bottom" constant="18" id="UVG-oh-OKy"/>
                             <constraint firstItem="1m3-ug-Aud" firstAttribute="leading" secondItem="iRC-nt-Op6" secondAttribute="leading" id="XrI-7b-3ge"/>
                             <constraint firstItem="ivb-Ny-XCw" firstAttribute="trailing" secondItem="d6b-Rg-VqL" secondAttribute="trailing" id="YQg-lg-VFE"/>
                             <constraint firstItem="ivb-Ny-XCw" firstAttribute="centerX" secondItem="KeY-rx-nih" secondAttribute="centerX" id="YeV-pU-o9V"/>
                             <constraint firstItem="1m3-ug-Aud" firstAttribute="trailing" secondItem="iRC-nt-Op6" secondAttribute="trailing" id="ZMz-CF-LUV"/>
+                            <constraint firstItem="HO1-uY-4Od" firstAttribute="trailing" secondItem="ivb-Ny-XCw" secondAttribute="trailing" id="ZNE-TW-cvK"/>
                             <constraint firstItem="1m3-ug-Aud" firstAttribute="leading" secondItem="ivb-Ny-XCw" secondAttribute="leading" id="dOV-gy-pss"/>
-                            <constraint firstItem="HO1-uY-4Od" firstAttribute="leading" secondItem="IS2-Y6-XDw" secondAttribute="trailing" constant="125" id="ea5-Us-a32"/>
                             <constraint firstItem="d6b-Rg-VqL" firstAttribute="centerX" secondItem="KeY-rx-nih" secondAttribute="centerX" id="h0r-jS-hZG"/>
                             <constraint firstItem="iRC-nt-Op6" firstAttribute="centerX" secondItem="KeY-rx-nih" secondAttribute="centerX" id="hLG-a2-4vN"/>
                             <constraint firstItem="iRC-nt-Op6" firstAttribute="top" secondItem="9iB-QV-MPY" secondAttribute="top" constant="20" id="rvV-yb-epG"/>
-                            <constraint firstItem="HO1-uY-4Od" firstAttribute="top" secondItem="1m3-ug-Aud" secondAttribute="bottom" constant="18" id="sDd-Gg-eny"/>
-                            <constraint firstItem="IS2-Y6-XDw" firstAttribute="top" secondItem="1m3-ug-Aud" secondAttribute="bottom" constant="18" id="soT-7g-Xyo"/>
+                            <constraint firstItem="1m3-ug-Aud" firstAttribute="trailing" secondItem="ivb-Ny-XCw" secondAttribute="trailing" id="sZZ-yh-SUK"/>
                             <constraint firstItem="ivb-Ny-XCw" firstAttribute="trailing" secondItem="iRC-nt-Op6" secondAttribute="trailing" id="u2R-8D-FsB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9iB-QV-MPY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="ivb-Ny-XCw" id="QAM-1I-tUR"/>
+                        <outlet property="passwordField" destination="1m3-ug-Aud" id="zAW-eL-Oh6"/>
+                        <outlet property="usernameField" destination="d6b-Rg-VqL" id="cfZ-KA-tEW"/>
+                        <segue destination="28Y-IN-eZm" kind="presentation" identifier="signUpSegue" id="BFg-72-fJl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQS-e3-8ID" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="784.85757121439292"/>
+            <point key="canvasLocation" x="33" y="850"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KPb-hF-yRO"/>
+    </inferredMetricsTieBreakers>
 </document>

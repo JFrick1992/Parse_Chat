@@ -25,17 +25,22 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
-        
+        if((usernameField.text?.isEmpty)! || (passwordField.text?.isEmpty)!) {
+            present(self.buildEmptyFieldAlertController(), animated: true){}
+        }
+        else {
+            loginUser()
+        }
     }
-    @IBAction func signupButton(_ sender: UIButton) {
-        signupUser()
-    }
-    func signupUser() {
-        let newUser = PFUser()
-        newUser.username = usernameField.text
-        //newUser.email
-    }
+
     func loginUser() {
-        
+        PFUser.logInWithUsername(inBackground: usernameField.text!, password: passwordField.text!) {
+            (user , error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "logInSegue", sender: nil)
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
