@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import Parse
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var newMessageField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +22,24 @@ class ChatViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func sendMessage(_ sender: Any) {
+        let chatMessage = PFObject(className: "Message")
+        if !((newMessageField.text?.isEmpty)!) {
+            chatMessage["text"] = newMessageField.text
+            chatMessage.saveInBackground() {
+                (success, error) in
+                    if success {
+                        print("Message saved")
+                        self.newMessageField.text = ""
+                
+                    } else
+                        if let error = error {
+                            print(error.localizedDescription)
+                        }
+            }
+        }
     }
-    */
-
 }
+    
+
+
