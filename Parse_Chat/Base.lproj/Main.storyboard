@@ -75,6 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="passwordField" destination="G0q-cd-l8L" id="mhs-iT-fcM"/>
                         <outlet property="usernameField" destination="Jvr-NX-yLN" id="ZFq-2P-acM"/>
@@ -111,7 +112,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n71-mO-TbV">
-                                <rect key="frame" x="0.0" y="66" width="375" height="522"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="571"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="78" id="hVr-E1-2JE" customClass="ChatCell" customModule="Parse_Chat" customModuleProvider="target">
@@ -160,7 +161,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFa-od-4Uh">
-                                <rect key="frame" x="0.0" y="588" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="d0H-7u-Pfj"/>
@@ -200,6 +201,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="Tg4-y3-ATO"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="newMessageField" destination="TwW-5y-goM" id="DB4-6L-LLg"/>
                         <outlet property="tableView" destination="n71-mO-TbV" id="gSE-a0-8ox"/>
@@ -289,6 +291,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9iB-QV-MPY"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="emailField" destination="ivb-Ny-XCw" id="QAM-1I-tUR"/>
                         <outlet property="passwordField" destination="1m3-ug-Aud" id="zAW-eL-Oh6"/>
@@ -303,11 +306,11 @@
         <!--Navigation Controller-->
         <scene sceneID="Xve-pw-cZM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G0g-wJ-u0m" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="G0g-wJ-u0m" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2qs-0w-biG">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -321,7 +324,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KPb-hF-yRO"/>
+        <segue reference="BFg-72-fJl"/>
         <segue reference="bGr-hw-knK"/>
     </inferredMetricsTieBreakers>
 </document>

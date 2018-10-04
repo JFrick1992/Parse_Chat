@@ -14,10 +14,7 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var newMessageField: UITextField!
     var messages = [PFObject]()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
