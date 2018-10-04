@@ -21,7 +21,7 @@ The following **stretch** user stories are implemented:
 - [ ] User sees an activity indicator while waiting for authentication (+1pt)
 - [ ] User can pull to refresh Chat feed (+1pt)
 - [ ] Add an "Adorable Avatar" for each user by requesting an avatar from the [Adorable Avatars API](https://github.com/adorableio/avatars-api) (+2pt)
-- [ ] Chat Bubble Style Design (+3pt)
+- [X] Chat Bubble Style Design (+3pt)
 - [ ] Expand or contract the cell layout as needed to show the chat message author (user) if it exists (+2pt)
 
 The following **additional** user stories are implemented:
@@ -45,6 +45,11 @@ Basic run:
 AutoLayout Features:
 
 ![](https://github.com/JFrick1992/Parse_Chat/blob/master/Demos/autolayouttest.gif)
+
+Chat Bubble Style (added after previous demos)
+
+![](https://github.com/JFrick1992/Parse_Chat/blob/master/Demos/bubbleView.png)
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
