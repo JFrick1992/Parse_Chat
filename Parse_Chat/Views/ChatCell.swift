@@ -10,11 +10,13 @@ import UIKit
 
 class ChatCell: UITableViewCell {
 
+    @IBOutlet weak var bubbleView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var chatLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        bubbleView.layer.cornerRadius=12
+        bubbleView.clipsToBounds=true
         // Initialization code
     }
 
