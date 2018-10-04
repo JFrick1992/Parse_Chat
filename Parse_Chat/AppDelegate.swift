@@ -23,7 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         })
         Parse.initialize(with: parseConfiguration)
-        return true
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let currentUser = PFUser.current() {
+            print(currentUser.username!)
+            let cvc = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
+            window?.rootViewController = cvc
+            return true
+        } else {
+            return true
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
